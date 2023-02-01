@@ -1,1 +1,1 @@
-(()=>{let e=document.createElement("div");e.innerText="hes actaully HIM!",document.getElementById("root").appendChild(e)})();
+(()=>{let e=document.createElement("div");e.innerText="lets cook B-)",document.getElementById("root").appendChild(e)})();
