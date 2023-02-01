@@ -22,15 +22,17 @@ Yousuf's Solo Proj
 3. good styling (CSS)
 
 ## Feature List
-[] setup
-  []webpack
-  []index html
-  []webpack build & dev
-  []server
-    []fake routes for recipe viewing
-    []fakre routes for recipe creating
-  []db
-    []setup psql 
-    []look into saving files such as imgs?
-  []flesh out feature set and requirements 
+1. [X]  setup
+1. [ ]webpack
+1. [ ]index html
+1. [ ]webpack build & dev
+  [ ]server
+    [ ]fake routes for recipe viewing
+    [ ]fakre routes for recipe creating
+  [ ]db
+    [ ]setup psql 
+    [ ]look into saving files such as imgs?
+  [ ]flesh out feature set and requirements 
+
+- [ ] setup
 
