@@ -3,13 +3,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 
 module.exports = {
-    entry: './client/index.js',
-    output: {
-        path: path.resolve(__dirname, './build'),
-        filename: 'bundle.js',
-    },
-    mode: process.env.NODE_ENV,
-    module: {
+  entry: './client/index.js',
+  output: {
+    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.js',
+  },
+  mode: process.env.NODE_ENV,
+  module: {
         rules: [
             {
             test: /\.jsx?/,
@@ -58,5 +58,7 @@ module.exports = {
       '/api': 'http://localhost:3000',
     },
   },
-
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 }

@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
+import Recipes from './Recipes.jsx';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+
+    }
   }
 
   render() {
     return (
-      <h3>
-        esape the matrixc
-      </h3>
+      <div>
+        <h3>Exape the matrics</h3>
+          <Recipes />
+      </div>
     )
   }
 }
