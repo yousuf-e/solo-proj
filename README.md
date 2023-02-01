@@ -28,10 +28,13 @@ Yousuf's Solo Proj
 - [X] webpack build & dev
 - [X] server basic setup
 - [X] fake routes for recipe viewing 
-- [ ] db
-- [ ] setup psql
-- [ ] set up api router file
-- [ ] look into saving files such as imgs?
-- [ ] flesh out feature set and requirements 
+- [X] db
+- [X] setup psql
+- [X] flesh out feature set and requirements 
+- [X] insert dummy data (5 rows) into DB 
+- [X] sketch out front end, component hierarchy 
+- [ ] create basic front end functionality
+- [ ] create basic front end styling
+
 
 
