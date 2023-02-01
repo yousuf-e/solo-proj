@@ -1,0 +1,1 @@
+document.createElement(div).innerText="TESTING: IF YOU SEE THIS MESSAGE CLAP!",document.getElementById("root").appendChild();
