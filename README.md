@@ -34,7 +34,9 @@ Yousuf's Solo Proj
 - [X] insert dummy data (5 rows) into DB 
 - [X] sketch out front end, component hierarchy 
 - [ ] create basic front end functionality
-- - [ ] create cards for recipes
+- - [X] create cards for recipes
+- - [ ] link front end to database, each recipe entry is a new card 
+- [ ] set up catch all, global err handlers
 - [ ] create basic front end styling
 
 

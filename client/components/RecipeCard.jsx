@@ -4,17 +4,15 @@ import React, { Component } from 'react';
 class RecipeCard extends Component{
   constructor(props) {
     super(props);
-
-    this.state = {
-
-    }
   }
 
   render() {
+    const { name, description, directions, _id } = this.props
     return (
       <article>
-        <h3>Recipe Name</h3>
-        <div>Recipe Descrip</div>
+        <h3>{name}</h3>
+        <div>{description}</div>
+        <div>{directions}</div>
       </article>
     );
   }

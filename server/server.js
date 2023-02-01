@@ -8,7 +8,7 @@ const apiController = require('./apiController');
 app.get('/api/recipes',
   apiController.getRecipeData,
   (req, res) => {
-    res.status(200).send(res.locals.recipes);
+    res.status(200).json({ recipes: res.locals.recipes });
   });
 
 
@@ -22,6 +22,7 @@ if (process.env.NODE_ENV === 'production') {
   });  
 }
 
+//set up catch all, global err handlers
 
 
 app.listen(3000); //listens on port 300
