@@ -28,10 +28,9 @@ Yousuf's Solo Proj
 - [X] webpack build & dev
 - [X] server basic setup
 - [X] fake routes for recipe viewing 
-- [ ] db
-- [ ] setup psql
-- [ ] set up api router file
-- [ ] look into saving files such as imgs?
-- [ ] flesh out feature set and requirements 
+- [X] db
+- [X] setup psql
+- [ ] focusing on the core function, viewing recipes from db; what are the next steps?
+- [ ] focusing on the secondary fn, adding recipes to the db; what are the next steps?
 
 
