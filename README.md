@@ -23,16 +23,15 @@ Yousuf's Solo Proj
 
 ## Feature List
 1. [X]  setup
-1. [ ]webpack
-1. [ ]index html
-1. [ ]webpack build & dev
-  [ ]server
-    [ ]fake routes for recipe viewing
-    [ ]fakre routes for recipe creating
-  [ ]db
-    [ ]setup psql 
-    [ ]look into saving files such as imgs?
-  [ ]flesh out feature set and requirements 
+- [ ] webpack
+- [ ] index html
+- [ ] webpack build & dev
+- [ ] server
+- [ ] fake routes for recipe viewing
+- [ ] fakre routes for recipe creating
+- [ ]db
+- [ ]setup psql 
+- [ ]look into saving files such as imgs?
+- [ ]flesh out feature set and requirements 
 
-- [ ] setup
 
