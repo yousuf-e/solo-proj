@@ -1,3 +1,3 @@
-let test = document.createElement(div);
-test.innerText = 'TESTING: IF YOU SEE THIS MESSAGE CLAP!';
+let test = document.createElement("div");
+test.innerText = 'youre actually HIM brotha!';
 document.getElementById('root').appendChild(test);

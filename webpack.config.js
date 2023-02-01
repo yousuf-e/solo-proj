@@ -42,9 +42,21 @@ module.exports = {
     }
   )],
   devServer: {
-    proxy: {
-      '/api':'http://localhost:3000'
-    }
-}
+    host: 'localhost',
+    // set the front end to port 8080 ( in build module unit it was automatically done by dev server? not sure why we have to eb explicit now but wev )
+    port: 8080,
+    // enable HMR on the devServer
+    hot: true,
+    // fallback to root for other urls
+    historyApiFallback: true,
+    // loads any static files. not needed but best practice. used for any images or things that you need to render to a page
+    // static: {
+    //   directory: path.resolve(__dirname, 'build'),
+    //   publicPath: '/',
+    // },
+    // proxy: {
+    //   '/**': 'http://localhost:3000',
+    // },
+  },
 
 }
