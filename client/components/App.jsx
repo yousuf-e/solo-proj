@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Recipes from './Recipes.jsx';
+import '../stylesheets/styles.scss';
+import AddRecipe from './addRecipe.jsx';
+
 
 class App extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       recipes: [],
       // fetchedRecipes: false
@@ -41,7 +43,8 @@ class App extends Component {
   render() {
     return (
       //take the state, pass it into recipes as props
-      <div>
+      <div className='recipeContainer'>
+        <AddRecipe />
         <Recipes
           recipes={this.state.recipes}
         />

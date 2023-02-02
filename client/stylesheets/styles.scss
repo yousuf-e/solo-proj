@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+$darkblack: #000000;
+$secondary: #242424;
+$tertiary: #333333;
+$background: #fefae0;
+
+//pallete 
+$lightGray: #EDEDE9;
+$darkGray: #D6CCC2;
+$papyrus: #F5EBE0;
+$lightBrown: #E3D5CA;
+$brown: #D5BDAF;
+
+
+
+
+
+header {
+  font-family: 'Comfortaa', cursive;
+  font-style: $darkblack;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: 'Comfortaa', cursive;
+  background-color: $papyrus;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img{
+  width:100%;
+  max-height: auto;
+  object-fit: contain
+}
+
+.recipeContainer {
+  background-color: $lightGray;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+
+  justify-items: space-evenly;
+  padding: 10px;
+}
+
+.recipeCard {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  background-color: $lightBrown;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  div{
+    align-items: flex-start;
+  }
+}
+
