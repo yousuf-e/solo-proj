@@ -57,12 +57,17 @@ body {
   }
   button {
     background: none;
+    border: none;
   }
   header {
     display: flex;
     align-items:flex-start;
     width: 100%;
+    height: auto;
     justify-content: space-between;
+    h2{
+      margin: .5em;
+    }
   }
   img{
     width:100%;

@@ -45,11 +45,15 @@ Yousuf's Solo Proj
 - [X] setup input page
 - [X] connect inputs so that filling out the form adds a entry to the database
 - [X] add a delete button to each card to remove it from the db 
-- [ ] setup input directions to be richtext
-- [ ] unmount compnent on delete 
+- [X] setup input directions to be richtext, 
+- [ ] setup react form properly submitting will send html to the back end (try and get by 12:30)
+- [ ] make the directions render the richtext properly
+- [ ] unmount component on delete 
+- [ ] Style each card to that it looks like an article 
+- [ ] make edited components update their entries in the db
+- [ ] style the inputs so that they dont look default (look clean!)
+- [ ] have a file upload image in the form
 - [ ] make input page an accordian
-- [ ] style the inputs so that they are clean
-- [ ] Style each card to that ti looks liek an article
 - [ ] setup header
 - [ ] add a heart button to each card 
 - [ ] add a favicon 

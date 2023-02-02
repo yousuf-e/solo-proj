@@ -28,8 +28,8 @@ class RecipeCard extends Component{
           <button onClick={this.handleDelete}>X</button>
         </header>
         <img src='https://picsum.photos/200'/>
-        <div>{description}</div>
-        <div>{directions}</div>
+        <div contentEditable="true">{description}</div>
+        <div contentEditable="true">{directions}</div>
       </article>
     );
   }
