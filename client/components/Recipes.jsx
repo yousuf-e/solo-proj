@@ -10,7 +10,7 @@ class Recipes extends Component{
   }
   
   render() {
-    const { recipes } = this.props;
+    const { recipes, handleDelete } = this.props;
     const cards = recipes.map((recipe) => {
       return <RecipeCard
         name={recipe.name}
@@ -18,6 +18,7 @@ class Recipes extends Component{
         description={recipe.description}
         key={recipe._id}
         id={recipe._id}
+        handleDelete={handleDelete}
       />
     });
     console.log("🚀 ~ file: Recipes.jsx:18 ~ Recipes ~ cards ~ cards", cards)

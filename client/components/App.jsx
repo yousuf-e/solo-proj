@@ -8,16 +8,33 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      recipes: [],
-      // fetchedRecipes: false
+      recipes: [], // 
       //will contain all the recipe info in an obj w the id as the key
       //will know if it fetched the recipes to it only does it when it needs to 
     }
     //fucntions will be 
     //to add the recipes(grab them from the reponse and add them to the state)
     this.addRecipes = this.addRecipes.bind(this); 
+    this.handleDelete = this.handleDelete.bind(this);
   }
   //will have to fetch the data from the api once the app mounts 
+  handleDelete(event) {
+    const { recipes } = this.state;
+    const { id } = event.target;
+    console.log('handleDelete invoked on', id);
+    fetch(`/api/recipes/${id}`, {
+        method: 'DELETE'
+      })
+      .then((data) => console.log('data returned from del',data)) //how can i modify this to unmount the component as well?
+      .then((data) => {
+        console.log(recipes);
+        const index = recipes.findIndex((recipe) => recipe._id == id);
+        recipes.splice(index, 1);
+        this.setState({ recipes })
+      })
+      .catch(err => console.log(err));
+
+  }
 
   componentDidMount() {
     fetch('/api/recipes')
@@ -46,6 +63,7 @@ class App extends Component {
         <AddRecipe />
         <Recipes
           recipes={this.state.recipes}
+          handleDelete={this.handleDelete}
         />
       </div>
     )

@@ -42,6 +42,7 @@ class AddRecipe extends Component {
      })
       .then((data) => {
         console.log(data);
+        this.setState({ name, description, directions });
       })
       .catch((err) => {
       console.error('Error',err);
