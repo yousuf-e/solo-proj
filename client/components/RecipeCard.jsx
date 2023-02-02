@@ -20,7 +20,8 @@ class RecipeCard extends Component{
   }
 
   render() {
-    const { name, description, directions, id } = this.props
+    const { name, description, directions, id } = this.props;
+
     return (
       <article className='recipeCard' >
         <header>
@@ -29,7 +30,7 @@ class RecipeCard extends Component{
         </header>
         <img src='https://picsum.photos/200'/>
         <div contentEditable="true">{description}</div>
-        <div contentEditable="true">{directions}</div>
+        <div contentEditable="true" className="directions" dangerouslySetInnerHTML={{__html: directions}}></div>
       </article>
     );
   }

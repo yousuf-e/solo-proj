@@ -8,14 +8,44 @@ class AddRecipe extends Component {
     this.state = {
       name: '',
       description: '',
-      directions:'hi!',
+      directions:'',
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleRichTextChange = this.handleRichTextChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+
   }
 
-  handleChange(html) { //modify handle change to set the appropriate state
+  handleChange(event) { //modify handle change to set the appropriate state
+    const { name, value } = event.target;
+    const newState = {};
+    newState[name] = value;
+    this.setState(newState);
+    console.log(event.target.value);
+  }
+
+  handleRichTextChange(html) { //modify handle change to set the appropriate state
     this.setState({ directions: html });
+    console.log(html);
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
     console.log(this.state);
+    const { name, description, directions } = this.state;
+    fetch('/api/recipes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ name, description, directions })
+     })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+      console.error('Error',err);
+    })
   }
 
   //add a handle submit to submit the data 
@@ -26,18 +56,28 @@ class AddRecipe extends Component {
     return( // chane the action to onSubmit, add a handler?
      <div> Create a new recipe!
        <hr></hr>
-      <form action="/api/recipes" method="POST"> 
+      <form onSubmit={this.handleSubmit}> 
       <p>
         <label htmlFor="name">
           <span>Name: </span>
         </label>
-        <input type="text" id="name" name="name" />
+            <input
+              type="text"
+              name="name"
+              value={this.state.name || ''}
+              onChange={this.handleChange}
+            />
       </p>
       <p>
         <label htmlFor="description">
           <span>Description: </span>
         </label>
-        <input type="text" id="name" name="description" />
+            <input
+              type="text"
+              name="description"
+              value={this.state.description || ''}
+              onChange={this.handleChange}
+            />
       </p>
       <p>
         <label htmlFor="directions">
@@ -46,9 +86,9 @@ class AddRecipe extends Component {
             <ReactQuill
               name="directions"
               theme="snow"
-              placeholder={'What shoudld we make today...'}
-              value={this.state.directions}
-              onChange={this.handleChange}
+              placeholder={'What should we make today...'}
+              value={this.state.directions || ''}
+              onChange={this.handleRichTextChange}
             />
       </p>
       <section>

@@ -65,7 +65,7 @@ body {
     width: 100%;
     height: auto;
     justify-content: space-between;
-    h2{
+    h2 {
       margin: .5em;
     }
   }
@@ -73,6 +73,12 @@ body {
     width:100%;
     max-height:30vw;
     object-fit:cover;
+  }
+  .directions{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: start;
   }
 }
 

@@ -11,7 +11,7 @@ apiController.getRecipeData = (req, res, next) => {
       res.locals.recipes = data.rows;
     })
     .then(() => next())
-    .catch(err => next({}));
+    .catch(err => next({err}));
 };
 
 apiController.addRecipeData = (req, res, next) => {

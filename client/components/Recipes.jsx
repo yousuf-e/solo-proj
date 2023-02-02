@@ -11,15 +11,15 @@ class Recipes extends Component{
   
   render() {
     const { recipes } = this.props;
-    const cards = recipes.map((recipe) =>
-      <RecipeCard
+    const cards = recipes.map((recipe) => {
+      return <RecipeCard
         name={recipe.name}
         directions={recipe.directions}
         description={recipe.description}
         key={recipe._id}
         id={recipe._id}
       />
-    );
+    });
     console.log("🚀 ~ file: Recipes.jsx:18 ~ Recipes ~ cards ~ cards", cards)
 
     return (

@@ -46,7 +46,7 @@ Yousuf's Solo Proj
 - [X] connect inputs so that filling out the form adds a entry to the database
 - [X] add a delete button to each card to remove it from the db 
 - [X] setup input directions to be richtext, 
-- [ ] setup react form properly submitting will send html to the back end (try and get by 12:30)
+- [X] setup react form properly submitting will send html to the back end (try and get by 12:30)
 - [ ] make the directions render the richtext properly
 - [ ] unmount component on delete 
 - [ ] Style each card to that it looks like an article 
