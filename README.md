@@ -47,16 +47,16 @@ Yousuf's Solo Proj
 - [X] add a delete button to each card to remove it from the db 
 - [X] setup input directions to be richtext, 
 - [X] setup react form properly submitting will send html to the back end (try and get by 12:30)
-- [ ] make the directions render the richtext properly
-- [ ] unmount component on delete 
-- [ ] Style each card to that it looks like an article 
+- [X] make the directions render the richtext properly
+- [X] unmount component on delete 
+- [X] Style each card to that it looks like an article 
+- [ ] add a favicon 
 - [ ] make edited components update their entries in the db
 - [ ] style the inputs so that they dont look default (look clean!)
 - [ ] have a file upload image in the form
 - [ ] make input page an accordian
 - [ ] setup header
 - [ ] add a heart button to each card 
-- [ ] add a favicon 
 - [ ] setup filter section 
 - [ ] ~no full recipe page~ 
 - [ ] add an image to each db entry 

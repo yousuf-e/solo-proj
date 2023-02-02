@@ -8,8 +8,6 @@ class RecipeCard extends Component{
     super(props);
   }
 
-
-
   render() {
     const { name, description, directions, id, handleDelete } = this.props;
 

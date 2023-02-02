@@ -14,7 +14,7 @@ class App extends Component {
     }
     //fucntions will be 
     //to add the recipes(grab them from the reponse and add them to the state)
-    this.addRecipes = this.addRecipes.bind(this); 
+    this.addRecipes = this.loadRecipes.bind(this); 
     this.handleDelete = this.handleDelete.bind(this);
   }
   //will have to fetch the data from the api once the app mounts 
@@ -37,16 +37,20 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/recipes')
-      .then(res => res.json())
-      .then(res => this.addRecipes(res))
-      .catch(err => console.log('App.componentDidMount: get recipes: ERROR: ', err));
+    this.loadRecipes();
   }
 
-  addRecipes(resRec) {
-    const { recipes } = resRec;
-    this.setState({ recipes });
-    return true; 
+  loadRecipes() {
+    console.log('load recipes invoked');
+    fetch('/api/recipes') // move this into addrecipes, rename it, and then invoke in the addred component
+      .then(res => res.json())
+      .then(res => {
+        const { recipes } = res;
+        this.setState({ recipes });
+        return true; 
+      })
+      .catch(err => console.log('App.componentDidMount: get recipes: ERROR: ', err)); //loadREcipes
+
   }
 
   //function def for adding the recipes -> will take the obj of the recipes from the input
@@ -60,7 +64,9 @@ class App extends Component {
     return (
       //take the state, pass it into recipes as props
       <div className='recipeContainer'>
-        <AddRecipe />
+        <AddRecipe
+          loadRecipes={this.loadRecipes}
+        />
         <Recipes
           recipes={this.state.recipes}
           handleDelete={this.handleDelete}

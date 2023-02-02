@@ -30,7 +30,7 @@ class AddRecipe extends Component {
   }
 
   handleSubmit = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     console.log(this.state);
     const { name, description, directions } = this.state;
     fetch('/api/recipes', {
@@ -41,8 +41,9 @@ class AddRecipe extends Component {
       body: JSON.stringify({ name, description, directions })
      })
       .then((data) => {
-        console.log(data);
-        this.setState({ name, description, directions });
+        console.log('data submitted:', data);
+        console.log(this.props);
+        // this.props.loadRecipes();
       })
       .catch((err) => {
       console.error('Error',err);
