@@ -2,7 +2,7 @@
 import '../stylesheets/styles.scss';
 import React, { Component } from 'react';
 import RecipeCard from './RecipeCard.jsx';
-import AddRecipe from './addRecipe.jsx';
+import AddRecipe from './AddRecipe.jsx';
 
 class Recipes extends Component{
   constructor(props) {

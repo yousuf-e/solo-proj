@@ -33,7 +33,7 @@ Yousuf's Solo Proj
 - [X] flesh out feature set and requirements 
 - [X] insert dummy data (5 rows) into DB 
 - [X] sketch out front end, component hierarchy 
-- [ ] create basic front end functionality
+- [X] create basic front end functionality
 - - [X] create entries for recipes
 - - [X] link front end to database, each recipe entry is a new card 
 - [X] set up catch all, global err handlers
@@ -43,15 +43,18 @@ Yousuf's Solo Proj
   - [X] have a nice clean background 
   - [X] use nice fonts 
 - [X] setup input page
+- [X] connect inputs so that filling out the form adds a entry to the database
+- [X] add a delete button to each card to remove it from the db 
 - [ ] setup input directions to be richtext
+- [ ] unmount compnent on delete 
 - [ ] make input page an accordian
-- [ ] add a delete button to each card to remove it from the db 
-- [ ] add a save button to each card 
 - [ ] style the inputs so that they are clean
+- [ ] Style each card to that ti looks liek an article
+- [ ] setup header
+- [ ] add a heart button to each card 
+- [ ] add a favicon 
 - [ ] setup filter section 
 - [ ] ~no full recipe page~ 
-- [ ] setup header
-- [ ] add a favicon 
 - [ ] add an image to each db entry 
 - [ ] have the image populate on each card 
 

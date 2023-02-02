@@ -32,15 +32,11 @@ body {
   align-items: center;
 }
 
-img{
-  width:100%;
-  max-height: auto;
-  object-fit: contain
-}
+
 
 .recipeContainer {
   background-color: $lightGray;
-  width: 40vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
 
@@ -58,6 +54,20 @@ img{
   padding: 10px;
   div{
     align-items: flex-start;
+  }
+  button {
+    background: none;
+  }
+  header {
+    display: flex;
+    align-items:flex-start;
+    width: 100%;
+    justify-content: space-between;
+  }
+  img{
+    width:100%;
+    max-height:30vw;
+    object-fit:cover;
   }
 }
 

@@ -13,19 +13,19 @@ class AddRecipe extends Component {
        <hr></hr>
       <form action="/api/recipes" method="POST">
       <p>
-        <label for="name">
+        <label htmlFor="name">
           <span>Name: </span>
         </label>
         <input type="text" id="name" name="name" />
       </p>
       <p>
-        <label for="name">
+        <label htmlFor="description">
           <span>Description: </span>
         </label>
         <input type="text" id="name" name="description" />
       </p>
       <p>
-        <label for="name">
+        <label htmlFor="directions">
           <span>Directions: </span>
         </label>
         <input type="text" id="name" name="directions" />

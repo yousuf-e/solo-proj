@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Recipes from './Recipes.jsx';
 import '../stylesheets/styles.scss';
-import AddRecipe from './addRecipe.jsx';
+import AddRecipe from './AddRecipe.jsx';
 
 
 class App extends Component {
@@ -27,7 +27,6 @@ class App extends Component {
   }
 
   addRecipes(resRec) {
-    console.log("🚀 ~ file: App.jsx:20 ~ App ~ addRecipes ~ recipes", resRec);
     const { recipes } = resRec;
     this.setState({ recipes });
     return true; 

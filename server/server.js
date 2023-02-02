@@ -23,11 +23,20 @@ app.get('/api/recipes',
 });
 
 app.post('/api/recipes',
+  apiController.addRecipeData,
   (req, res) => {
     console.log(req.body);
     res.status(201).redirect('/');
   }
 );
+
+app.delete('/api/recipes/:id',
+  apiController.deleteRecipeData,
+  (req, res) => {
+    console.log(req.body);
+    res.status(301).redirect('/')
+  }
+)
 
 if (process.env.NODE_ENV === 'production') {
 // statically serve everything in the build folder on the route '/build'
@@ -55,7 +64,7 @@ const defaultErr = {
   }
 }
 app.use((err, req, res, next) => {
-  const errorObj = { ...defaultErr, message: { err: err } };
+  const errorObj = Object.assign({}, defaultErr, err);
   console.log(errorObj.log);
   console.log(errorObj.status);
   res.status(errorObj.status).json(errorObj.message);
